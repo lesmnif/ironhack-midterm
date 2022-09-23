@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="../styles/footer.css" />
     <link rel="stylesheet" type="text/css" href="../styles/newsletter.css" />
     <link rel="stylesheet" type="text/css" href="../styles/index.css" />
-
     <link
       rel="stylesheet"
       type="text/css"
@@ -22,11 +21,34 @@
       type="image/x-icon"
       href="../assets/logos/favicon.ico"
     />
-    <script src="../js/main.js"></script>
+    <script src="../js/projectsData.js"></script>
   </head>
 
   <body>
-    <header-component></header-component>
+    <header>
+      <nav class="navbar">
+        <label class="navbar-toggle" for="chkToggle">
+          <i class="fa fa-bars burger"></i>
+        </label>
+        <a class="logo" href="../index.html">
+          <img src="../assets/logos/circle.svg" alt="Circle Logo" />
+        </a>
+        <ul class="main-nav">
+          <li>
+            <a class="nav-links menu-selected" href="../index.html">Home</a>
+          </li>
+          <li>
+            <a class="nav-links" href="./2.html#projects">Projects</a>
+          </li>
+          <li>
+            <a class="nav-links" href="">Services</a>
+          </li>
+        </ul>
+        <a class="btn capitalize" id="menuBtn" href="../pages/contact.html"
+          >Contact us</a
+        >
+      </nav>
+    </header>
 
     <section id="project">
       <h1 class="title">Simplify</h1>
@@ -35,7 +57,7 @@
 
         <span class="completed-title"
           >Completed on
-          <span class="completed-title-data">June 22, 2021</span>
+          <span class="completed-title-data">December 27, 2020</span>
         </span>
       </div>
 
@@ -75,68 +97,46 @@
       </article>
     </section>
 
-    <section class="recent-projects">
+    <section class="recent-projects" id="projects">
       <h2 class="capitalize">Other projects</h2>
-      <div class="projects-container">
-        <article class="project-card">
-          <a class="project-wrapper" href="../pages/projects.html">
-            <img
-              class="img-project"
-              src="../assets/projects-section/4.jpg"
-              alt="Project 1"
-            />
-            <div class="project-inner-card">
-              <h4 class="project-title">Orbit</h4>
-              <p class="project-description capitalize">UI design</p>
-              <a class="learn-more" href="#">Learn more</a>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-wrapper" href="../pages/projects.html">
-            <img
-              class="img-project"
-              src="../assets/projects-section/5.jpg"
-              alt="Project 2"
-            />
-            <div class="project-inner-card">
-              <h4 class="project-title">Purify</h4>
-              <p class="project-description capitalize">UI/UX Design</p>
-              <a class="learn-more" href="#">Learn more</a>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-wrapper" href="../pages/projects.html">
-            <img
-              class="img-project"
-              src="../assets/projects-section/6.jpg"
-              alt="Project 3"
-            />
-            <div class="project-inner-card">
-              <h4 class="project-title">CryptoPie</h4>
-              <p class="project-description capitalize">App Development</p>
-              <a class="learn-more" href="#">Learn more</a>
-            </div>
-          </a>
-        </article>
-      </div>
+      <div class="projects-container"></div>
     </section>
 
-    <newsletter-component></newsletter-component>
+    <section class="newsletter">
+      <h2>Do you have any questions?</h2>
+      <h3>Let us help you!</h3>
+      <form action="">
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Enter your email"
+        />
+        <a class="newsletter-suscribe">
+          <input type="button" value="Suscribe" />
+        </a>
+      </form>
+    </section>
 
-    <footer-component></footer-component>
-
-    <div class="modal">
-      <div class="modal-content">
-        <span class="close-button">x</span>
-        <p class="modal-title">Circle Agency</p>
-        <br />
-        <h4>Oops, something went wrong. 😬</h4>
+    <footer class="footer">
+      <div class="address-info">
+        <a class="address-info-logo" href="index.html">
+          <img src="../assets/logos/circle.svg" alt="Circle Logo" />
+        </a>
+        <p>
+          2972 Westheimer Rd. Santa Ana,
+          <br />
+          Illinois 85486
+        </p>
       </div>
-    </div>
-
-    <script src="../js/modal.js"></script>
-    <script src="../js/projects.js"></script>
+      <ul class="sitemap">
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </footer>
   </body>
 </html>

@@ -20,11 +20,33 @@
       type="image/x-icon"
       href="./assets/logos/favicon.ico"
     />
-    <script src="./js/main.js"></script>
+    <script src="./js/fetchData.js"></script>
   </head>
 
+  <header>
+    <nav class="navbar">
+      <label class="navbar-toggle" for="chkToggle">
+        <i class="fa fa-bars burger"></i>
+      </label>
+      <a class="logo" href="../index.html">
+        <img src="../assets/logos/circle.svg" alt="Circle Logo" />
+      </a>
+      <ul class="main-nav" >
+        <li>
+          <a class="nav-links menu-selected" href="../index.html">Home</a>
+        </li>
+        <li>
+          <a class="nav-links" href="../index.html#projects">Projects</a>
+        </li>
+        <li>
+          <a class="nav-links" href="../index.html#services">Services</a>
+        </li>
+      </ul>
+      <a class="btn capitalize" id="menuBtn" href="../pages/contact.html">Contact us</a>
+    </nav>
+  </header>
+
   <body>
-    <header-component></header-component>
     <section class="hero">
       <div class="hero-content">
         <h1 class="capitalize">Empower your Business with stunning desing!</h1>
@@ -97,58 +119,6 @@
     <section id="projects" class="recent-projects">
       <h2 class="capitalize">Recent projects</h2>
       <div class="projects-container">
-        <article class="project-card">
-          <a class="project-wrapper" href="./pages/projects.html?id=1">
-            <img
-              class="img-project"
-              src="./assets/projects-section/1.jpg"
-              alt="Project 1"
-            />
-            <div class="project-inner-card">
-              <h4 class="project-title">Simplify (Static)</h4>
-              <p class="project-description capitalize">
-                UI design & App development
-              </p>
-              <a class="learn-more" href="./pages/projects.html?id=1"
-                >Learn more</a
-              >
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-wrapper" href="./pages/projects.html?id=2">
-            <img
-              class="img-project"
-              src="./assets/projects-section/2.jpg"
-              alt="Project 2"
-            />
-            <div class="project-inner-card">
-              <h4 class="project-title">Dashcoin</h4>
-              <p class="project-description capitalize">Web development</p>
-              <a class="learn-more" href="./pages/projects.html?id=2"
-                >Learn more</a
-              >
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-wrapper" href="./pages/projects.html?id=3">
-            <img
-              class="img-project"
-              src="./assets/projects-section/3.jpg"
-              alt="Project 3"
-            />
-            <div class="project-inner-card">
-              <h4 class="project-title">Vectorify</h4>
-              <p class="project-description capitalize">
-                User experience design
-              </p>
-              <a class="learn-more" href="./pages/projects.html?id=3"
-                >Learn more</a
-              >
-            </div>
-          </a>
-        </article>
       </div>
     </section>
 
@@ -244,9 +214,42 @@
       </div>
     </section>
 
-    <newsletter-component id="newsletter"></newsletter-component>
+    <section class="newsletter">
+      <h2>Do you have any questions?</h2>
+      <h3>Let us help you!</h3>
+      <form action="">
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Enter your email"
+        />
+        <a class="newsletter-suscribe">
+          <input type="button" value="Suscribe" />
+        </a>
+      </form>
+    </section>
+    
 
-    <footer-component></footer-component>
-
+    <footer class="footer">
+      <div class="address-info">
+        <a class="address-info-logo" href="index.html">
+          <img src="../assets/logos/circle.svg" alt="Circle Logo" />
+        </a>
+        <p>
+          2972 Westheimer Rd. Santa Ana,
+          <br />
+          Illinois 85486
+        </p>
+      </div>
+      <ul class="sitemap">
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </footer>
   </body>
 </html>

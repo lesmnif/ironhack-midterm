@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Circle Agency – Contact</title>
     <link rel="stylesheet" href="../styles/global.css" />
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="../styles/contact.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/header.css" />
-
     <link 
       rel="stylesheet"
       type="text/css"
@@ -21,13 +19,34 @@
       type="image/x-icon"
       href="../assets/logos/favicon.ico"
     />
-    <script src="../js/main.js"></script>
   </head>
 
   <body>
-    <header-component></header-component>
+    <header>
+      <nav class="navbar">
+        <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+          <i class="fa fa-bars burger"></i>
+        </label>
+        <a class="logo" href="../index.html">
+          <img src="../assets/logos/circle.svg" alt="Circle Logo" />
+        </a>
+        <input type="checkbox" id="chkToggle"></input>
+        <ul class="main-nav" id="js-menu">
+          <li>
+            <a class="nav-links menu-selected" href="../index.html">Home</a>
+          </li>
+          <li>
+            <a class="nav-links" href="../index.html#projects">Projects</a>
+          </li>
+          <li>
+            <a class="nav-links" href="../index.html#services">Services</a>
+          </li>
+        </ul>
+        <a class="btn capitalize" id="menuBtn" href="../pages/contact.html">Contact us</a>
+      </nav>
+    </header>
 
-    <form id="form-container" action="" method="get" class="formClass">
+    <form id="form-container" class="formClass">
       <h1>Contact Us</h1>
 
       <div class="nameDiv">
@@ -37,12 +56,8 @@
           placeholder="Enter your full name"
           name="name"
           id="name"
-          onblur="validateName()"
           required
         />
-        <p id="errorName" hidden class="errorForm">
-          Please, complete the field NAME with your name
-        </p>
       </div>
       <div class="emailAndPhone">
         <div>
@@ -52,13 +67,8 @@
             name="email"
             id="email"
             placeholder="Enter your email address"
-            onblur="validateEmail()"
             required
           />
-          <p id="errorEmail" hidden class="errorForm">
-            Please, complete the field EMAIL
-          </p>
-          <p id="errorFormatEmail" hidden class="errorForm">Invalid email</p>
         </div>
         <div>
           <label for="phone">Phone</label><br />
@@ -67,12 +77,8 @@
             name="phone"
             id="phone"
             placeholder="Enter your phone number"
-            onblur="validatePhone()"
             required
           />
-          <p id="errorPhone" hidden class="errorForm">
-            Please enter your phone number
-          </p>
         </div>
       </div>
       <div class="messageDiv">
@@ -83,34 +89,39 @@
           cols="30"
           rows="10"
           placeholder="Write your message here..."
-          onblur="validateMessage()"
           required
         ></textarea>
-        <p id="errorMessageUser" hidden class="errorForm">
-          Write us at least 5 characters
-        </p>
       </div>
       <div class="buttonSubmit">
-        <button type="button" onclick="sendForm()" id="submitForm">
+        <button type="submit" id="submitForm">
           Submit
         </button>
-        <p class="errorForm" id="errorSubmit" hidden>
-          PLEASE, REVIEW THE REQUIRED FIELDS
-        </p>
       </div>
-      <div class="modal">
-        <div class="modal-content">
-          <span class="close-button">x</span>
-          <p class="modal-title">Circle Agency</p>
-          <br />
-          <h4>Thank you! Your form has been sent successfully!!</h4>
-        </div>
+      <div id="successForm">
+        
       </div>
     </form>
 
-    <footer-component></footer-component>
-
-    <script src="../js/modal.js"></script>
-    <script src="../js/contact.js"></script>
+    <footer class="footer">
+      <div class="address-info">
+        <a class="address-info-logo" href="index.html">
+          <img src="../assets/logos/circle.svg" alt="Circle Logo" />
+        </a>
+        <p>
+          2972 Westheimer Rd. Santa Ana,
+          <br />
+          Illinois 85486
+        </p>
+      </div>
+      <ul class="sitemap">
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </footer>
+    <script src="../js/postData.js"></script>
   </body>
 </html>
