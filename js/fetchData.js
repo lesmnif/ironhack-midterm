@@ -1,4 +1,4 @@
-const url = `http://jsonplaceholder.typicode.com/posts/?_limit=3`
+const url = `https://jsonplaceholder.typicode.com/posts/?_limit=3`
 
 async function renderData() {
   const myResponse = await (await fetch(url)).json()
@@ -22,13 +22,15 @@ async function renderData() {
                             <p class="project-description capitalize">
                                 ${item.body}
                             </p>
-                            <a target="_blank" class="learn-more" href="./pages/${item.id}.html"
+                            <a target="_blank" class="learn-more" href="./pages/${
+                              item.id
+                            }.html"
                                 >Learn more</a
                             >
                             </div>
                         </article>`)
   })
-
   document.querySelector(".projects-container").innerHTML = dataCard
 }
+
 renderData()

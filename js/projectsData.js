@@ -1,4 +1,4 @@
-const url = `http://jsonplaceholder.typicode.com/posts/?_limit=4`
+const url = `https://jsonplaceholder.typicode.com/posts/?_limit=4`
 
 async function renderData() {
   const myResponse = await (await fetch(url)).json()
