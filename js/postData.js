@@ -1,6 +1,6 @@
-document.getElementById("form-container").addEventListener("submit", Post)
+document.getElementById("form-container").addEventListener("submit", addPost)
 
-async function Post(event) {
+async function addPost(event) {
   event.preventDefault()
   const name = document.getElementById("name").value
   const email = document.getElementById("email").value
